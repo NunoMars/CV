@@ -99,6 +99,8 @@ td, th
 }
 .head_certificats
 {
+    margin-left: 30px;
+    margin-right: 30px;
     text-align: center;
     background-color: rgb(109, 40, 199);
     font-size: 40px;
