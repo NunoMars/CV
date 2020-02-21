@@ -1,9 +1,6 @@
 body
 {
-    border: 3px outset;
-    border-radius: 40px;
     background-image: url(../images/depositphotos_130075328-stock-photo-background-of-snow-texture.jpg);
-    box-shadow: 6px 6px 6px black; 
 }
 
 a
@@ -14,12 +11,6 @@ a
 .nom, .portable, .mail
 {
     font-size: 30px;
-}
-
-.tittle
-{
-    background-color: rgb(108, 13, 233, 0.5);
-    border-radius: 40px;
 }
 
 .sub_tittle
@@ -95,8 +86,8 @@ a:hover
 table
 {
     border: 3px outset;
-    border-radius: 20px;
-    box-shadow: 6px 6px 6px black; 
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px black; 
 }
 th, .return
 {
@@ -109,20 +100,12 @@ td, th, .head
     box-shadow: 6px 6px 6px black;
     border-radius: 40px; 
 }
-.first, .head
+.first
 {
     background-color: rgb(108, 13, 233, 0.5);
     border-radius: 40px; 
 }
-.first
-{
-    width: 300px;
-}
 
-.head
-{
-    width: 100%;
-}
 .formation
 {
     font-size: 25px;
