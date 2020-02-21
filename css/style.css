@@ -6,6 +6,11 @@ body
     box-shadow: 6px 6px 6px black; 
 }
 
+a
+{
+    text-decoration:none;
+}
+
 .nom, .portable, .mail
 {
     font-size: 30px;
@@ -78,6 +83,7 @@ li
 a:visited
 {
     color: red;
+    text-decoration:none;
 }
 
 a:hover
