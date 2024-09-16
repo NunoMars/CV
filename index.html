@@ -153,66 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-monitor"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-                <p class="s-description text-center">
-                  Utilisation et customisation de modèles, bootstrap,
-                   ou codés selon les maquettes choisies par le client.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-code-working"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Développement</h2>
-                <p class="s-description text-center">
-                  Utilisation de Python pour le BackEnd, en fonction du projet,
-                   mise en place de FLASK ou DJANGO.
-                  Le FrontEnd est codé en HTML et CSS, JavaScript, AJAX, jQuery, Htmx au besoin du projet.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Responsive Design</h2>
-                <p class="s-description text-center">
-                  Je m'assure que le site s'affichera convenablement sur tout support. Tablet, Pc, Smartphone.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-stats-bars"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Analyse de projets</h2>
-                <p class="s-description text-center">
-                  Analyse des besoins du client, utilisation de UML,
-                   utilisation de "personas" afin de mieux comprendre la problématique 
-                   et les différentes utilisations et études,
-                   établissement du cahier des charges.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row" id="services-container"></div>
       </div>
     </section><!-- End Services Section -->
     <!-- ======= Counter Section ======= -->
@@ -639,6 +580,60 @@
 </script>
 <!-- Certificates -->
 <script>
+  const services = [
+      {
+          title: "Web Design",
+          icon: "ion-monitor",
+          description: "Utilisation et customisation de modèles, bootstrap, ou codés selon les maquettes choisies par le client."
+      },
+      {
+          title: "Web Développement",
+          icon: "ion-code-working",
+          description: "Utilisation de Python pour le BackEnd, en fonction du projet, mise en place de FLASK ou DJANGO. Le FrontEnd est codé en HTML et CSS, JavaScript, AJAX, jQuery, Htmx au besoin du projet."
+      },
+      {
+          title: "Responsive Design",
+          icon: "ion-android-phone-portrait",
+          description: "Je m'assure que le site s'affichera convenablement sur tout support. Tablet, Pc, Smartphone."
+      },
+      {
+          title: "Analyse de projets",
+          icon: "ion-stats-bars",
+          description: "Analyse des besoins du client, utilisation de UML, utilisation de 'personas' afin de mieux comprendre la problématique et les différentes utilisations et études, établissement du cahier des charges."
+      },
+      {
+          title: "Développement Python",
+          icon: "ion-code",
+          description: "Développement d'applications en Python, utilisation de bibliothèques et frameworks tels que Flask, Django, FastAPI, etc."
+      },
+      {
+          title: "Développement DevOps",
+          icon: "ion-settings",
+          description: "Mise en place de pipelines CI/CD, automatisation des tests, déploiement continu, utilisation de Terraform, Ansible, Docker, Kubernetes, Jenkins, etc."
+      }
+  ];
+
+  const servicesContainer = document.getElementById('services-container');
+
+  services.forEach(service => {
+      const serviceElement = document.createElement('div');
+      serviceElement.classList.add('col-md-4');
+      serviceElement.innerHTML = `
+          <div class="service-box">
+              <div class="service-ico">
+                  <span class="ico-circle"><i class="${service.icon}"></i></span>
+              </div>
+              <div class="service-content">
+                  <h2 class="s-title">${service.title}</h2>
+                  <p class="s-description text-center">
+                      ${service.description}
+                  </p>
+              </div>
+          </div>
+      `;
+      servicesContainer.appendChild(serviceElement);
+  });
+
   const certificates = [
       {
           title: "Démarrez votre projet en Python",
