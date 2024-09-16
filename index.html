@@ -110,7 +110,10 @@
                   </div>
                   <div class="skill-mf">
                     <p class="title-s">Skills</p>
-                    <div id="skills-container"></div>
+                    <div class="row">
+                        <div class="col-md-6" id="skills-container-left"></div>
+                        <div class="col-md-6" id="skills-container-right"></div>
+                    </div>
                 </div>
                 </div>
                 <div class="col-md-6">
@@ -615,9 +618,10 @@
         { name: "GCP", percentage: 70},
     ];
 
-    const skillsContainer = document.getElementById('skills-container');
+    const skillsContainerLeft = document.getElementById('skills-container-left');
+    const skillsContainerRight = document.getElementById('skills-container-right');
 
-    skills.forEach(skill => {
+    skills.forEach((skill, index) => {
         const skillElement = document.createElement('div');
         skillElement.innerHTML = `
             <span>${skill.name}</span> <span class="pull-right">${skill.percentage}%</span>
@@ -625,7 +629,11 @@
                 <div class="progress-bar" role="progressbar" style="width: ${skill.percentage}%;" aria-valuenow="${skill.percentage}" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         `;
-        skillsContainer.appendChild(skillElement);
+        if (index % 2 === 0) {
+            skillsContainerLeft.appendChild(skillElement);
+        } else {
+            skillsContainerRight.appendChild(skillElement);
+        }
     });
 </script>
 <!-- Certificates -->
