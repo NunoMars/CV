@@ -235,6 +235,12 @@ servicesContainer.appendChild(serviceElement);
 });
 
 const certificates = [
+  {
+    title: "AWS Coud Operations Badge",
+    category: "AWS",
+    date: "28 Mai 2025",
+    imgSrc: "assets/img/AWS_Cloud_Operations.jpg"
+},
 {
     title: "Démarrez votre projet en Python",
     category: "Python",
