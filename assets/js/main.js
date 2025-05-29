@@ -440,6 +440,14 @@ const projects = [
           productionLink: "https://site-voyance.herokuapp.com/",
           date: "En production sur: Heroku"
       },
+      {
+          title: "Site Garage",
+          imgSrc: "assets/img/work-7.png",
+          category: "Site Web Resposive Backend Python Django et front end HTML,Css, et back end des gestion compléte du garage",
+          githubLink: "Code privé",
+          productionLink: "https://garage-maubuisson.fr/",
+          date: "En production VPS"
+      },
 
   ];
 
