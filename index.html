@@ -555,6 +555,26 @@
       transition: width 0.3s ease-out;
     }
     */
+    
+    .project-content {
+      padding: 1.5rem;
+    }
+    
+    .project-tech {
+      margin: 1rem 0;
+    }
+    
+    .project-tech .tech-tag {
+      background: var(--light);
+      color: var(--primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 
@@ -1428,7 +1448,7 @@
     // GÉNÉRATION DES CERTIFICATS
     const certificatesContainer = document.getElementById('certificates-container');
     if (certificatesContainer) {
-      // Ajout du CSS pour certificate-card s'il manque
+      // Ajout du CSS pour certificate-card et padding manquant
       const style = document.createElement('style');
       style.textContent = `
         .certificate-card {
@@ -1451,6 +1471,15 @@
           font-size: 0.8rem;
           font-weight: 500;
           display: inline-block;
+          margin-right: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+        /* CORRECTION DU PADDING MANQUANT */
+        .project-content {
+          padding: 1.5rem !important;
+        }
+        .certificate-card .project-content {
+          padding: 1.5rem !important;
         }
       `;
       document.head.appendChild(style);
