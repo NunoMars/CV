@@ -1,384 +1,1540 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Web page Nuno MARCELINO</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <title>Nuno Ricardo - Développeur Full Stack & Expert DevOps</title>
+  <meta content="Développeur Full Stack Python/Django, Expert DevOps et IA. 7+ ans d'expérience. Disponible pour vos projets." name="description">
+  
+  <!-- CSS Framework moderne -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #64748b;
+      --accent: #f59e0b;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+    
+    .hero-section {
+      min-height: 100vh;
+      background: url('assets/img/hero.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: white;
+    }
+    
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      animation: fadeInUp 1s ease 0.2s both;
+      min-height: 60px; /* Pour éviter le saut de layout */
+    }
+    
+    .typewriter {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink-caret 1s step-end infinite;
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+    
+    .cta-buttons {
+      animation: fadeInUp 1s ease 0.4s both;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    
+    .btn-primary-custom {
+      background: var(--accent);
+      border: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+      color: white;
+      background: #e5890a;
+    }
+    
+    .btn-outline-custom {
+      border: 2px solid white;
+      color: white;
+      padding: 13px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.1);
+    }
+    
+    .btn-outline-custom:hover {
+      background: white;
+      color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+    }
+    
+    .section-padding {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      margin-bottom: 3rem;
+    }
+    
+    .stats-section {
+      background: var(--light);
+    }
+    
+    .stat-card {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      margin-bottom: 2rem;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: block;
+    }
+    
+    .stat-label {
+      color: var(--secondary);
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+    
+    .skill-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      height: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skill-bar {
+      margin-bottom: 1.5rem;
+    }
+    
+    .skill-name {
+      display: flex;
+      justify-content: space-between;  /* Correction ici au lieu de "between" */
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .skill-percentage {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    
+    .progress {
+      height: 8px;
+      border-radius: 10px;
+      background: var(--light);
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      background: var(--gradient);
+      border-radius: 10px;
+      transition: width 1.5s ease-out;
+      width: 0% !important; /* Commence toujours à 0 */
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Animation de remplissage */
+    .progress-bar.animate {
+      width: var(--target-width) !important;
+    }
+    
+    /* Effet vague qui traverse la barre (garde l'effet existant) */
+    .progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+      border-radius: 10px;
+      animation: wave 2s infinite;
+    }
+    
+    @keyframes wave {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    
+    /* Particules flottantes (garde l'effet existant) */
+    .skill-bar::after {
+      content: '✨';
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      font-size: 1.2em;
+    }
+    
+    .skill-bar:hover::after {
+      opacity: 1;
+      animation: sparkle 1s infinite alternate;
+    }
+    
+    @keyframes sparkle {
+      0% { transform: translateY(-50%) scale(1); }
+      100% { transform: translateY(-50%) scale(1.2) rotate(15deg); }
+    }
+    
+    /* Effet hover sur la barre entière */
+    .skill-bar:hover .progress-bar {
+      filter: brightness(1.1);
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+    }
+    
+    .skill-bar:hover .skill-name {
+      color: var(--primary);
+    }
+    
+    .skill-bar:hover .skill-percentage {
+      color: var(--accent);
+      font-weight: 800;
+    }
+    
+    .service-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      height: 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--gradient);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      margin-bottom: 2rem;
+      height: 100%;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .project-card a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .project-card a:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .project-card a:hover .project-card {
+      transform: translateY(-5px);
+    }
+    
+    .project-image img,
+    .certificate-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;  /* Changé de 'cover' à 'contain' pour voir l'image entière */
+      background: white;
+      transition: transform 0.3s ease;
+    }
+    
+    .diploma-image {
+      height: 250px;
+      object-fit: contain;  /* Affichage complet de l'image */
+      width: 100%;
+      background: white;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .certificate-image {
+      height: 180px;
+      object-fit: contain;  /* Affichage complet de l'image */
+      width: 100%;
+      background: white;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    /* Animations au survol */
+    .project-card:hover .project-image img,
+    .project-card:hover .diploma-image {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+    
+    .certificate-card:hover .certificate-image {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+    
+    /* Style pour les liens de zoom */
+    .zoom-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .project-card:hover .zoom-overlay,
+    .certificate-card:hover .zoom-overlay {
+      opacity: 1;
+    }
+    
+    .zoom-icon {
+      color: white;
+      font-size: 2rem;
+      background: rgba(37, 99, 235, 0.8);
+      padding: 1rem;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+    
+    .zoom-overlay:hover .zoom-icon {
+      transform: scale(1.1);
+    }
+    
+    /* Style pour les modales de zoom */
+    .modal-dialog-centered {
+      display: flex;
+      align-items: center;
+      min-height: calc(100% - 1rem);
+    }
+    
+    .modal-content {
+      background: transparent;
+      border: none;
+    }
+    
+    .modal-body {
+      padding: 0;
+    }
+    
+    .modal-img {
+      width: 100%;
+      height: auto;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .floating-nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav-link-custom {
+      color: var(--dark);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link-custom:hover {
+      color: var(--primary);
+    }
+    
+    .cv-link {
+      background: var(--accent) !important;
+      color: white !important;
+      padding: 0.5rem 1rem !important;
+      border-radius: 25px !important;
+      margin-left: 0.5rem !important;
+      transition: all 0.3s ease !important;
+    }
+    
+    .cv-link:hover {
+      background: #e5890a !important;
+      color: white !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3) !important;
+    }
+    
+    /* CSS pour les overlays des projets */
+    .project-card:hover .project-overlay {
+      opacity: 1 !important;
+    }
+    
+    .contact-section {
+      background: var(--dark);
+      color: white;
+    }
+    
+    .contact-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .typewriter-about {
+      border-right: 2px solid var(--primary);
+      animation: blink-caret-about 1s step-end infinite;
+    }
+    
+    @keyframes blink-caret-about {
+      from, to { border-color: transparent; }
+      50% { border-color: var(--primary); }
+    }
+    
+    .typewriter-finished {
+      border-right: none !important;
+      animation: none !important;
+    }
+    
+    /* Animation individuelle au hover */
+    .skill-bar:hover .progress-bar {
+      animation: fillOnHover 0.8s ease-out forwards;
+    }
+    
+    @keyframes fillOnHover {
+      from { 
+        width: 0%;
+      }
+      to { 
+        width: var(--target-width);
+      }
+    }
+    
+    /* SUPPRIMER CES ANIMATIONS CSS QUI CRÉENT LE CONFLIT */
+    /*
+    .skill-bar:hover .progress-bar {
+      animation: fillOnHover 0.8s ease-out forwards;
+    }
+    
+    @keyframes fillOnHover {
+      from { 
+        width: 0%;
+      }
+      to { 
+        width: var(--target-width);
+      }
+    }
+    */
+    
+    /* GARDER SEULEMENT CETTE ANIMATION POUR LE HOVER */
+    .skill-bar:hover {
+      transform: scale(1.02);
+      background: rgba(37, 99, 235, 0.02);
+      box-shadow: 0 5px 20px rgba(37, 99, 235, 0.1);
+    }
+    
+    /* Reset pour permettre la re-animation au hover - SUPPRIMER AUSSI */
+    /*
+    .skill-bar:not(:hover) .progress-bar {
+      transition: width 0.3s ease-out;
+    }
+    */
+  </style>
 </head>
 
-<body id="page-top">
-  <!-- ======= Header/ Navbar ======= -->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Haut de page</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">A propos de moi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Certificats</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#realistaions">Réalisations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contacts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="assets/img/CV.pdf">Mon CV en PDF</a>
-          </li> 
-        </ul>
-      </div>
-    </div>
+<body>
+  <!-- Navigation flottante -->
+  <nav class="floating-nav d-none d-md-block">
+    <a href="#hero" class="nav-link-custom">Accueil</a>
+    <a href="#about" class="nav-link-custom">À propos</a>
+    <a href="#skills" class="nav-link-custom">Compétences</a>
+    <a href="#services" class="nav-link-custom">Services</a>
+    <a href="#projects" class="nav-link-custom">Projets</a>
+    <a href="#diplomas" class="nav-link-custom">Diplômes</a>
+    <a href="#certificates" class="nav-link-custom">Certifications</a>
+    <a href="#contact" class="nav-link-custom">Contact</a>
+    <a href="assets/img/CV.pdf" target="_blank" class="nav-link-custom cv-link">
+      <i class="fas fa-file-pdf me-1"></i>Mon CV PDF
+    </a>
   </nav>
-  <!-- ======= Intro Section ======= -->
-  <div id="home" class="intro route bg-image" style="background-image:url(assets/img/intro-bg.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">Nuno Marcelino</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Développeur Python, Développeur D'applications Python, Développeur Web, Développeur BackEnd, Administrateur Systhème DevOps, Musicien</span><strong class="text-slider"></strong></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-        </div>
-      </div>
-    </div>
-  </div><!-- End Intro Section -->
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/photo_cv_compresse.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Nuno Marcelino</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Développeur BackEnd/DevOps</span></p>
-                        <p><span class="title-s">Email: </span> <span>nuno.ricardo.mars@gmail.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>(+33) 625537373</span></p>
-                        <p>
-                          <div class="socials">
-                            <ul>
-                              <li><a href="https://www.linkedin.com/in/nuno-ricardo/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                              <li><a href="https://github.com/NunoMars/"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
-                              <li><a href="https://www.facebook.com/nuno.marcelino.5/"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                              <li><a href="https://www.instagram.com/nuno_musico/"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                            </ul>
-                          </div>
-                        </p>                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skills</p>
-                    <div class="row">
-                        <div class="col-md-6" id="skills-container-left"></div>
-                        <div class="col-md-6" id="skills-container-right"></div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Qui suis-je.
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      Passionné par le développement depuis toujours, j'ai eu l'opportunité de transformer cette passion en expertise en suivant deux formations certifiantes : l'une en développement Python Django et l'autre en administration système DevOps. Avec plus de 5 ans d'expérience, j'ai eu le privilège de travailler sur des projets variés pour des clients de renom tels que Veolia et Groupama, où j'ai pu mettre en œuvre des solutions innovantes et efficaces.
-                    </p>
-                    <p class="lead">
-                      Le développement, la musique et le cinéma sont mes plus grandes passions, des domaines dans lesquels je puise ma créativité et mon inspiration au quotidien.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End About Section -->
-    <!-- ======= Services Section ======= -->
-    <section id="service" class="services-mf route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Services
-              </h3>
-              <p class="subtitle-a">
-                Mon domaine d'action.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="services-container"></div>
-      </div>
-    </section><!-- End Services Section -->
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">12</p>
-                <span class="counter-text">PROJETS TERMINES</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">5</p>
-                <span class="counter-text">ANNÉES D'EXPÉRIENCE</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ios-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">21</p>
-                <span class="counter-text">CERTIFICATIONS</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">1</p>
-                <span class="counter-text">PRIX GAGNE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Counter Section -->
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                CERTIFICATIONS
-              </h3>
-              <p class="subtitle-a">
-                Dernier diplome obtenu.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="work-box">
-              <a href="assets/img/Diplôme_page-0001.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/Diplôme_page-0001.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Développeur d’application - Python</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Python</span> / <span class="w-date">22 Jui. 2021</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col">
-            <div class="work-box">
-              <a href="assets/img/Titre_Pro_DevOps.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/Titre_Pro_DevOps.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Administrateur Systhème DevOps</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">DevOps</span> / <span class="w-date">5 Sep. 2024</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Certificats
-              </h3>
-              <p class="subtitle-a">
-                Certificats de réussite obtenus.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="certificates-container">          
-        </div>
 
-      </div>
-    </section><!-- End Portfolio Section -->
-    <!-- ======= Portfolio Section ======= -->
-    <section id="realistaions" class="portfolio-mf sect-pt4 route">
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section d-flex align-items-center justify-content-center" style="min-height: 100vh;">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-box text-center">
-            <h3 class="title-a">
-              Réalisations
-            </h3>
-            <p class="subtitle-a">
-              Différents, sites et travaux réalisés pendant la formation hors ceux chez les differents clients (Veolia, Groupama).Différents sites et travaux réalisés durant ma formation, en dehors de ceux effectués pour des clients tels que Veolia et Groupama.
-            <div class="line-mf"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row" id="portfolio-container"></div>
-    </section><!-- End Portfolio Section -->
-    <!-- ======= Contact Section ======= -->
-    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">                
-                  <div class="col-md-9">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-a">
-                        Me contacter.
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        Avez vous de questions? Un message a me faire parvenir?
-                      </p>
-                      <ul class="list-ico">
-                        <li><span class="ion-ios-location"></span> 27 rue du Commerce 95610 ERAGNY</li>
-                        <li><span class="ion-ios-telephone"></span> (+33) 625537373</li>
-                        <li><span class="ion-email"></span><A HREF="mailto:nuno.ricardo.mars@gmail.com">nuno.ricardo.mars@gmail.com</A></li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="https://www.linkedin.com/in/nuno-ricardo/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
-                        <li><a href="https://github.com/NunoMars/"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
-                        <li><a href="https://www.facebook.com/nuno.marcelino.5/"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                        <li><a href="https://www.instagram.com/nuno_musico/"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-lg-8 mx-auto">
+          <div class="hero-content">
+            <h1>Nuno Marcelino</h1>
+            <p class="hero-subtitle">
+              <span id="typewriter-text" class="typewriter"></span>
+            </p>
+            <div class="cta-buttons justify-content-center">
+              <a href="#projects" class="btn-primary-custom">
+                <i class="fas fa-rocket me-2"></i>Voir mes projets
+              </a>
+              <a href="#contact" class="btn-outline-custom">
+                <i class="fas fa-envelope me-2"></i>Me contacter
+              </a>
+              <a href="assets/img/CV.pdf" target="_blank" class="btn-outline-custom">
+                <i class="fas fa-file-pdf me-2"></i>Télécharger CV
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section><!-- End Contact Section -->
-  </main><!-- End #main -->
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>Nuno MARCELINO</strong> 2024. All Rights Reserved</p>
-            <div class="credits">
-              Designed by Nuno MARCELINO</a>
+        <div class="col-lg-8 mx-auto mt-5">
+          <div class="hero-visual d-flex flex-column align-items-center">
+            <div class="hero-circle mb-3">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="hero-particles d-flex justify-content-center"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/jquery.counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="stat-card">
+            <span class="stat-number">7+</span>
+            <span class="stat-label">Années d'expérience</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Projets réalisés</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card">
+            <span class="stat-number">22</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Satisfaction client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section - QUI SUIS-JE -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="about-img">
+            <img src="assets/img/photo_cv_compresse.jpg" alt="Nuno Marcelino" class="img-fluid" style="border-radius: 20px; width: 100%; height: 400px; object-fit: cover;">
+          </div>
+          <div class="mt-4">
+            <div class="socials text-center">
+              <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 1rem;">
+                <li><a href="https://www.linkedin.com/in/nuno-ricardo/" style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/NunoMars/" style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.facebook.com/nuno.marcelino.5/" style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/nuno_musico/" style="width: 50px; height: 50px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="about-me pt-4 pt-md-0">
+            <div class="title-box-2">
+              <h5 class="title-left" style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 2rem;">
+                Qui suis-je.
+              </h5>
+            </div>
+            <div id="about-text-container">
+              <p class="lead" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <span id="about-text-1" class="typewriter-about"></span>
+              </p>
+              <p class="lead" style="font-size: 1.1rem; line-height: 1.8;">
+                <span id="about-text-2" class="typewriter-about"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding" style="background: var(--light);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Mes Compétences Techniques</h2>
+        <p class="section-subtitle">Expertise approfondie dans les technologies modernes</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="skill-card">
+            <h4 class="mb-4">Langages & Frameworks</h4>
+            <div id="skills-left"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="skill-card">
+            <h4 class="mb-4">DevOps & Cloud</h4>
+            <div id="skills-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding" style="background: var(--light);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Mes Services</h2>
+        <p class="section-subtitle">Solutions complètes pour vos projets numériques</p>
+      </div>
+      <div class="row" id="services-container">
+        <!-- Services générés dynamiquement -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Projets & Réalisations</h2>
+        <p class="section-subtitle">Découvrez mes dernières créations</p>
+      </div>
+      <div class="row" id="projects-container">
+        <!-- Projets générés dynamiquement -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Diplomas Section - LES DEUX DIPLOMES -->
+  <section id="diplomas" class="section-padding" style="background: var(--light);">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center mb-5">
+            <h2 class="section-title">DIPLÔMES</h2>
+            <p class="section-subtitle">Derniers diplômes obtenus</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="project-card">
+            <div class="project-image position-relative">
+              <img src="assets/img/Diplôme_page-0001.jpg" alt="Développeur d'application Python" class="diploma-image">
+              <div class="zoom-overlay" data-bs-toggle="modal" data-bs-target="#diplomaModal1">
+                <i class="fas fa-search-plus zoom-icon"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4 class="text-primary">Développeur d'application - Python</h4>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Niveau 6</span>
+              </div>
+              <p class="text-muted mb-3">Formation certifiante niveau 6 (Bac+3/4) en développement d'applications Python</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">22 Juillet 2021</small>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#diplomaModal1">
+                  <i class="fas fa-eye me-1"></i>Voir
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="project-card">
+            <div class="project-image position-relative">
+              <img src="assets/img/Titre_Pro_DevOps.jpg" alt="Administrateur Système DevOps" class="diploma-image">
+              <div class="zoom-overlay" data-bs-toggle="modal" data-bs-target="#diplomaModal2">
+                <i class="fas fa-search-plus zoom-icon"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4 class="text-primary">Administrateur Système DevOps</h4>
+              <div class="project-tech">
+                <span class="tech-tag">DevOps</span>
+                <span class="tech-tag">Niveau 6</span>
+              </div>
+              <p class="text-muted mb-3">Titre professionnel niveau 6 (Bac+3/4) en administration système et DevOps</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">5 Septembre 2024</small>
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#diplomaModal2">
+                  <i class="fas fa-eye me-1"></i>Voir
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modales pour les diplômes -->
+  <div class="modal fade" id="diplomaModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Développeur d'application - Python</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/img/Diplôme_page-0001.jpg" alt="Développeur d'application Python" class="modal-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="diplomaModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Administrateur Système DevOps</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/img/Titre_Pro_DevOps.jpg" alt="Administrateur Système DevOps" class="modal-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Certifications & Formations</h2>
+        <p class="section-subtitle">Formation continue et expertise certifiée</p>
+      </div>
+      <div class="row" id="certificates-container">
+        <!-- Certificats générés dynamiquement -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title" style="color: white;">Discutons de votre projet</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Prêt à donner vie à vos idées</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="contact-card">
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="mb-4">Contactez-moi</h4>
+                <div class="mb-3">
+                  <i class="fas fa-envelope me-3"></i>
+                  <a href="mailto:nuno.ricardo.mars@gmail.com" style="color: white;">nuno.ricardo.mars@gmail.com</a>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-phone me-3"></i>
+                  <span>+33 6 25 53 73 73</span>
+                </div>
+                <div class="mb-3">
+                  <i class="fas fa-file-pdf me-3"></i>
+                  <a href="assets/img/CV.pdf" target="_blank" style="color: var(--accent);">Télécharger mon CV PDF</a>
+                </div>
+                <div class="mb-4">
+                  <i class="fas fa-map-marker-alt me-3"></i>
+                  <span>Éragny, Île-de-France</span>
+                </div>
+                <div class="d-flex gap-3">
+                  <a href="https://www.linkedin.com/in/nuno-ricardo/" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                  <a href="https://github.com/NunoMars/" class="text-white"><i class="fab fa-github fa-2x"></i></a>
+                  <a href="https://www.facebook.com/nuno.marcelino.5/" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                  <a href="https://www.instagram.com/nuno_musico/" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h5 class="mb-3">Pourquoi me choisir ?</h5>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="fas fa-check me-2" style="color: var(--accent);"></i> 7+ ans d'expérience</li>
+                  <li class="mb-2"><i class="fas fa-check me-2" style="color: var(--accent);"></i> Expert DevOps certifié</li>
+                  <li class="mb-2"><i class="fas fa-check me-2" style="color: var(--accent);"></i> Spécialiste IA & Python</li>
+                  <li class="mb-2"><i class="fas fa-check me-2" style="color: var(--accent);"></i> 22 certifications</li>
+                  <li class="mb-2"><i class="fas fa-check me-2" style="color: var(--accent);"></i> Solutions sur mesure</li>
+                  <li class="mb-2"><i class="fas fa-check me-2" style="color: var(--accent);"></i> Disponible rapidement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--dark); padding: 2rem 0; text-align: center; color: white;">
+    <div class="container">
+      <p>&copy; Copyright <strong>Nuno MARCELINO</strong> 2024. All Rights Reserved</p>
+      <p>Designed by Nuno MARCELINO</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Effet typewriter pour la section À propos
+    const aboutTexts = [
+      "Passionné par le développement depuis toujours, j'ai eu l'opportunité de transformer cette passion en expertise en suivant deux formations certifiantes : l'une en développement Python Django et l'autre en administration système DevOps. Avec plus de 7 ans d'expérience, j'ai eu le privilège de travailler sur des projets variés pour des clients de renom tels que Veolia et Groupama, où j'ai pu mettre en œuvre des solutions innovantes et efficaces.",
+      "Le développement, la musique et le cinéma sont mes plus grandes passions, des domaines dans lesquels je puise ma créativité et mon inspiration au quotidien."
+    ];
+    
+    let currentAboutText = 0;
+    let aboutCharIndex = 0;
+    
+    function typeAboutText() {
+      if (currentAboutText < aboutTexts.length) {
+        const targetElement = document.getElementById(`about-text-${currentAboutText + 1}`);
+        const fullText = aboutTexts[currentAboutText];
+        
+        if (aboutCharIndex < fullText.length) {
+          targetElement.textContent += fullText.charAt(aboutCharIndex);
+          aboutCharIndex++;
+          setTimeout(typeAboutText, 30); // Vitesse plus rapide pour les longs textes
+        } else {
+          // Texte terminé, supprimer le curseur et passer au suivant
+          targetElement.classList.add('typewriter-finished');
+          currentAboutText++;
+          aboutCharIndex = 0;
+          
+          if (currentAboutText < aboutTexts.length) {
+            setTimeout(typeAboutText, 500); // Pause entre les paragraphes
+          }
+        }
+      }
+    }
+    
+    // Observer pour détecter quand la section About devient visible
+    const aboutObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          setTimeout(typeAboutText, 1000); // Démarrer après 1 seconde
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    // Observer la section About
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutObserver.observe(aboutSection);
+    }
+
+    // Effet typewriter pour le sous-titre du Hero (code existant)
+    const typewriterText = document.getElementById('typewriter-text');
+    const texts = [
+      "Développeur Full Stack & Expert DevOps",
+      "Spécialisé en Python, IA et Solutions Cloud",
+      "7+ ans d'expérience en développement",
+      "Expert en intégration LLM & API IA",
+      "Solutions DevOps sur AWS, Azure, GCP"
+    ];
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let currentText = '';
+    
+    function typeWriter() {
+      const fullText = texts[textIndex];
+      
+      if (isDeleting) {
+        currentText = fullText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        currentText = fullText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+      
+      typewriterText.textContent = currentText;
+      
+      let typeSpeed = isDeleting ? 50 : 100;
+      
+      if (!isDeleting && charIndex === fullText.length) {
+        typeSpeed = 2000; // Pause à la fin
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 500; // Pause avant le nouveau texte
+      }
+      
+      setTimeout(typeWriter, typeSpeed);
+    }
+    
+    // Démarrer l'effet typewriter du Hero après un délai
+    setTimeout(typeWriter, 1500);
+
+    // Données des compétences mises à jour
+    const skills = [
+      { name: "PYTHON", percentage: 85 },
+      { name: "DJANGO", percentage: 78 },
+      { name: "FLASK", percentage: 61 },
+      { name: "FASTAPI", percentage: 75 },
+      { name: "HTML", percentage: 72 },
+      { name: "CSS", percentage: 65 },
+      { name: "JAVASCRIPT", percentage: 65 },
+      { name: "jQuery", percentage: 72 },
+      { name: "AJAX", percentage: 70 },
+      { name: "Htmx", percentage: 68 },
+      { name: "SQL", percentage: 65 },
+      { name: "POSTGRESQL", percentage: 80 },
+      { name: "MySQL", percentage: 65 },
+      { name: "UML", percentage: 60 },
+      { name: "RAG", percentage: 75 },
+      { name: "LLM APIs", percentage: 80 },
+      { name: "WebSockets", percentage: 70 },
+      { name: "Anthropic Claude", percentage: 82 },
+      { name: "Google Gemini", percentage: 75 },
+      { name: "Meta Llama", percentage: 70 }
+    ];
+
+    const devopsSkills = [
+      { name: "Docker", percentage: 75 },
+      { name: "Kubernetes", percentage: 70 },
+      { name: "Terraform", percentage: 75 },
+      { name: "Ansible", percentage: 70 },
+      { name: "Jenkins", percentage: 70 },
+      { name: "Git", percentage: 85 },
+      { name: "GitHub", percentage: 80 },
+      { name: "GitLab", percentage: 70 },
+      { name: "AWS", percentage: 70 },
+      { name: "Azure", percentage: 70 },
+      { name: "GCP", percentage: 70 },
+      { name: "Linux", percentage: 80 },
+      { name: "Windows", percentage: 70 },
+      { name: "Heroku", percentage: 70 },
+      { name: "Redis", percentage: 68 },
+      { name: "MongoDB", percentage: 65 },
+      { name: "Elasticsearch", percentage: 60 },
+      { name: "Ollama", percentage: 75 },
+      { name: "Hugging Face", percentage: 73 },
+      { name: "Vector DBs", percentage: 70 }
+    ];
+
+    // Fonction pour créer les barres de compétences avec data-target
+    function createSkillBar(skill) {
+      return `
+        <div class="skill-bar" data-skill-level="${skill.percentage}">
+          <div class="skill-name">
+            <span>${skill.name}</span>
+            <span class="skill-percentage" data-target="${skill.percentage}">0%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" data-target="${skill.percentage}" style="--target-width: ${skill.percentage}%"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    // GÉNÉRATION DES COMPÉTENCES
+    document.getElementById('skills-left').innerHTML = skills.map(createSkillBar).join('');
+    document.getElementById('skills-right').innerHTML = devopsSkills.map(createSkillBar).join('');
+
+    // Animation des barres + compteur
+    const skillsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          const skillBars = entry.target.querySelectorAll('.skill-bar');
+          
+          skillBars.forEach((bar, index) => {
+            const progressBar = bar.querySelector('.progress-bar');
+            const percentageElement = bar.querySelector('.skill-percentage');
+            const targetWidth = parseInt(progressBar.dataset.target);
+            
+            setTimeout(() => {
+              // Animation de la barre au scroll
+              progressBar.style.width = targetWidth + '%';
+              progressBar.classList.add('animate');
+              
+              // Animation du compteur au scroll
+              let currentPercentage = 0;
+              const increment = targetWidth / 50;
+              const timer = setInterval(() => {
+                currentPercentage += increment;
+                if (currentPercentage >= targetWidth) {
+                  currentPercentage = targetWidth;
+                  clearInterval(timer);
+                }
+                percentageElement.textContent = Math.round(currentPercentage) + '%';
+              }, 30);
+              
+            }, index * 150);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    skillsObserver.observe(document.getElementById('skills'));
+
+    // Animation au hover pour chaque barre individuellement
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(() => {
+        const allSkillBars = document.querySelectorAll('.skill-bar');
+        
+        allSkillBars.forEach(bar => {
+          const progressBar = bar.querySelector('.progress-bar');
+          const percentageElement = bar.querySelector('.skill-percentage');
+          const targetWidth = parseInt(progressBar.dataset.target);
+          let isHovering = false;
+          
+          bar.addEventListener('mouseenter', function() {
+            if (isHovering) return; // Éviter les animations multiples
+            isHovering = true;
+            
+            // Désactiver la transition CSS temporairement
+            progressBar.style.transition = 'none';
+            progressBar.style.width = '0%';
+            percentageElement.textContent = '0%';
+            
+            // Force le reflow pour appliquer le reset
+            progressBar.offsetHeight;
+            
+            // Réactiver la transition et animer
+            setTimeout(() => {
+              progressBar.style.transition = 'width 0.8s cubic-bezier(0.4, 0.0, 0.2, 1)';
+              progressBar.style.width = targetWidth + '%';
+              
+              // Animation du compteur synchronisée
+              let currentPercentage = 0;
+              const increment = targetWidth / 40; // 40 étapes pour 0.8s
+              const stepDuration = 800 / 40; // 20ms par étape
+              
+              const timer = setInterval(() => {
+                currentPercentage += increment;
+                if (currentPercentage >= targetWidth) {
+                  currentPercentage = targetWidth;
+                  clearInterval(timer);
+                  isHovering = false; // Animation terminée
+                }
+                percentageElement.textContent = Math.round(currentPercentage) + '%';
+              }, stepDuration);
+              
+            }, 100);
+          });
+          
+          bar.addEventListener('mouseleave', function() {
+            // Garder les valeurs finales après le hover
+            setTimeout(() => {
+              if (!isHovering) {
+                progressBar.style.width = targetWidth + '%';
+                percentageElement.textContent = targetWidth + '%';
+              }
+            }, 100);
+          });
+        });
+      }, 2000); // Attendre que l'animation de scroll soit terminée
+    });
+
+
+    // Données des services
+    const services = [
+      {
+        title: "Développement IA & LLM",
+        icon: "fas fa-brain",
+        description: "Intégration de modèles LLM (Claude, Gemini, Llama, etc.), développement d'assistants IA personnalisés, systèmes RAG et chatbots intelligents."
+      },
+      {
+        title: "Web Développement",
+        icon: "fas fa-code",
+        description: "Utilisation de Python pour le BackEnd, en fonction du projet, mise en place de FLASK ou DJANGO. Le FrontEnd est codé en HTML et CSS, JavaScript, AJAX, jQuery, Htmx au besoin du projet."
+      },
+      {
+        title: "API & Intégrations",
+        icon: "fas fa-plug",
+        description: "Développement d'APIs REST/GraphQL, intégration de services tiers, WebSockets pour temps réel, et connexions avec toutes les APIs LLM du marché."
+      },
+      {
+        title: "DevOps & Infrastructure",
+        icon: "fas fa-cogs",
+        description: "Mise en place de pipelines CI/CD, automatisation des tests, déploiement continu, utilisation de Terraform, Ansible, Docker, Kubernetes, Jenkins, etc."
+      },
+      {
+        title: "Solutions d'Automatisation",
+        icon: "fas fa-robot",
+        description: "Automatisation de processus métier avec IA, traitement de données en masse, systèmes de veille automatisés et workflows intelligents."
+      },
+      {
+        title: "Analyse de projets",
+        icon: "fas fa-chart-bar",
+        description: "Analyse des besoins du client, utilisation de UML, utilisation de 'personas' afin de mieux comprendre la problématique et les différentes utilisations et études, établissement du cahier des charges."
+      }
+    ];
+
+    // GÉNÉRATION DES SERVICES
+    const servicesContainer = document.getElementById('services-container');
+    services.forEach(service => {
+      const serviceElement = document.createElement('div');
+      serviceElement.classList.add('col-md-4', 'mb-4');
+      serviceElement.innerHTML = `
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="${service.icon}"></i>
+          </div>
+          <h4>${service.title}</h4>
+          <p>${service.description}</p>
+        </div>
+      `;
+      servicesContainer.appendChild(serviceElement);
+    });
+
+    // Données des projets
+    const projects = [
+      {
+        title: "Assistant IA Personnalisé",
+        imgSrc: "assets/img/work-ai.jpg",
+        category: "Solution IA avec intégration multi-LLM (Claude, Gemini, Llama) et système RAG pour réponses contextuelles",
+        githubLink: "Code privé",
+        productionLink: "#",
+        date: "2024 - En cours",
+        technologies: ["Python", "FastAPI", "RAG", "Claude API", "WebSockets", "Vector DB"]
+      },
+      {
+        title: "Site Garage Maubuisson",
+        imgSrc: "assets/img/work-7.png",
+        category: "Site Web Responsive Backend Python Django et front end HTML,CSS, et back end de gestion complète du garage",
+        githubLink: "Code privé",
+        productionLink: "https://garage-maubuisson.fr/",
+        date: "En production VPS",
+        technologies: ["Django", "Python", "PostgreSQL", "HTML", "CSS"]
+      },
+      {
+        title: "Pur beurre",
+        imgSrc: "assets/img/work-5.jpg",
+        category: "Site Web Responsive Backend Python Django et front end HTML/CSS, Javascript et AJAX",
+        githubLink: "https://github.com/NunoMars/P8-Pur-Beurre",
+        productionLink: "https://nunopurbeurre.herokuapp.com/",
+        date: "En production sur Heroku",
+        technologies: ["Django", "Python", "AJAX", "PostgreSQL"]
+      },
+      {
+        title: "Site voyance",
+        imgSrc: "assets/img/work-6.jpg",
+        category: "Site Web Responsive Backend Python Django et front end HTML,CSS, Javascript et AJAX",
+        githubLink: "https://github.com/NunoMars/Site-voyance",
+        productionLink: "https://site-voyance.herokuapp.com/",
+        date: "En production sur Heroku",
+        technologies: ["Django", "Python", "JavaScript", "AJAX"]
+      },
+      {
+        title: "GrandPy app",
+        imgSrc: "assets/img/work-4.jpg",
+        category: "Site Web Responsive Backend Python Flask (Api Google maps) et front end HTML,CSS, Javascript et AJAX",
+        githubLink: "https://github.com/NunoMars/GrandPy",
+        date: "06 Mai. 2020",
+        technologies: ["Flask", "Python", "Google Maps API", "AJAX"]
+      },
+      {
+        title: "MacGyver Scapes",
+        imgSrc: "assets/img/work-1.jpg",
+        category: "Mini-jeu en Python",
+        githubLink: "https://github.com/NunoMars/MacGyver",
+        date: "18 Sep. 2018",
+        technologies: ["Python", "Pygame"]
+      }
+    ];
+
+    // GÉNÉRATION DES PROJETS
+    const projectsContainer = document.getElementById('projects-container');
+    projects.forEach(project => {
+      const projectElement = document.createElement('div');
+      projectElement.classList.add('col-md-6', 'mb-4');
+      projectElement.innerHTML = `
+        <div class="project-card">
+          <div class="project-image position-relative">
+            <img src="${project.imgSrc}" alt="${project.title}" style="width: 100%; height: 250px; object-fit: cover;">
+            <div class="project-overlay d-flex align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(37, 99, 235, 0.8); opacity: 0; transition: opacity 0.3s ease;">
+              <i class="fas fa-laptop-code text-white" style="font-size: 3rem;"></i>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>${project.title}</h4>
+            <div class="project-tech">
+              ${project.technologies ? project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('') : ''}
+            </div>
+            <p>${project.category}</p>
+            <div class="d-flex gap-2 mt-3">
+              ${project.githubLink !== "Code privé" ? `<a href="${project.githubLink}" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i>Code</a>` : '<span class="badge bg-secondary">Code privé</span>'}
+              ${project.productionLink && project.productionLink !== "#" ? `<a href="${project.productionLink}" target="_blank" class="btn btn-sm btn-primary">Voir le site</a>` : ''}
+            </div>
+            <small class="text-muted">${project.date}</small>
+          </div>
+        </div>
+      `;
+      projectsContainer.appendChild(projectElement);
+    });
+
+    // Données complètes des certificats
+    const certificates = [
+    {
+        title: "AWS Coud Operations Badge",
+        category: "AWS",
+        date: "28 Mai 2025",
+        imgSrc: "assets/img/AWS_Cloud_Operations.jpg"
+    },
+    {
+        title: "Démarrez votre projet en Python",
+        category: "Python",
+        date: "22 Dec. 2018",
+        imgSrc: "assets/img/1023860641.jpg"
+    },
+    {
+        title: "Découvrez la programmation orientée objet avec Python",
+        category: "Python",
+        date: "04 Jan. 2019",
+        imgSrc: "assets/img/6026297988.jpg"
+    },
+    {
+        title: "Apprenez à programmer en Python",
+        category: "Python",
+        date: "16 Jan. 2019",
+        imgSrc: "assets/img/9241165423.jpg"
+    },
+    {
+        title: "Perfectionnez-vous en Python",
+        category: "Python",
+        date: "06 Jan. 2019",
+        imgSrc: "assets/img/6870091314.jpg"
+    },
+    {
+        title: "Apprenez à apprendre",
+        category: "E-learning",
+        date: "21 Dec. 2018",
+        imgSrc: "assets/img/8268949771.jpg"
+    },
+    {
+        title: "Gérez votre code avec Git-Hub",
+        category: "Dév",
+        date: "9 Jan. 2019",
+        imgSrc: "assets/img/2217245809.jpg"
+    },
+    {
+        title: "Découvrez le fonctionnement des algorithmes",
+        category: "Python",
+        date: "5 Jan. 2019",
+        imgSrc: "assets/img/2539790450.jpg"
+    },
+    {
+        title: "Comprendre le web",
+        category: "Dev Web",
+        date: "22 Dec. 2018",
+        imgSrc: "assets/img/3099720815.jpg"
+    },
+    {
+        title: "Apprenez à coder avec javascript",
+        category: "JavaScript",
+        date: "13 Fev. 2020",
+        imgSrc: "assets/img/4673471887.jpg"
+    },
+    {
+        title: "Débutez l'analyse logicielle avec UML",
+        category: "UML",
+        date: "11 Avr. 2019",
+        imgSrc: "assets/img/4822170484.jpg"
+    },
+    {
+        title: "Apprenez à bien cadrer un projet multimédia",
+        category: "E-learning",
+        date: "16 Mai. 2018",
+        imgSrc: "assets/img/5165458160.jpg"
+    },
+    {
+        title: "UX design: découvrez les fondamentaux!",
+        category: "Dév Web",
+        date: "22 Avr. 2019",
+        imgSrc: "assets/img/6009320775.jpg"
+    },
+    {
+        title: "Utilisez des API REST dans vos projets Web",
+        category: "Python Web",
+        date: "16 Jan. 2020",
+        imgSrc: "assets/img/6106761010.jpg"
+    },
+    {
+        title: "Introduction a jQuery",
+        category: "jQuery",
+        date: "22 Dec. 2019",
+        imgSrc: "assets/img/6328615241.jpg"
+    },
+    {
+        title: "Apprenez à créer votre site Web avec HTML5 et CSS3",
+        category: "HTML CSS",
+        date: "27 Dec. 2029",
+        imgSrc: "assets/img/9832774170.jpg"
+    },
+    {
+        title: "Découvrez le framework Django",
+        category: "Python Django",
+        date: "07 Fev. 2020",
+        imgSrc: "assets/img/9910145386.jpg"
+    },
+    {
+        title: "Modélisez et implémentez une base de données relationnelle avec UML",
+        category: "UML",
+        date: "31 Mai. 2019",
+        imgSrc: "assets/img/4516741063.jpg"
+    },
+    {
+        title: "Gérez votre projet informatique facilement !",
+        category: "E-learning",
+        date: "10 Avr. 2019",
+        imgSrc: "assets/img/4015478839.jpg"
+    },
+    {
+        title: "Testez votre projet avec Python",
+        category: "Python",
+        date: "21 Oct. 2019",
+        imgSrc: "assets/img/1298081829.jpg"
+    },
+    {
+        title: "Concevez un site avec Flask",
+        category: "Python Flask",
+        date: "31 Oct. 2019",
+        imgSrc: "assets/img/3218235297.jpg"
+    },
+    // Ajouter de nouveaux certificats ici
+    ];
+
+    // GÉNÉRATION DES CERTIFICATS
+    const certificatesContainer = document.getElementById('certificates-container');
+    if (certificatesContainer) {
+      // Ajout du CSS pour certificate-card s'il manque
+      const style = document.createElement('style');
+      style.textContent = `
+        .certificate-card {
+          background: white;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+          margin-bottom: 2rem;
+          height: 100%;
+        }
+        .certificate-card:hover {
+          transform: translateY(-5px);
+        }
+        .tech-tag {
+          background: var(--light);
+          color: var(--primary);
+          padding: 0.25rem 0.75rem;
+          border-radius: 15px;
+          font-size: 0.8rem;
+          font-weight: 500;
+          display: inline-block;
+        }
+      `;
+      document.head.appendChild(style);
+
+      certificates.forEach((cert, index) => {
+        const certElement = document.createElement('div');
+        certElement.classList.add('col-md-4', 'mb-4');
+        certElement.innerHTML = `
+          <div class="certificate-card">
+            <div class="position-relative">
+              <img src="${cert.imgSrc}" alt="${cert.title}" class="certificate-image">
+              <div class="zoom-overlay" data-bs-toggle="modal" data-bs-target="#certModal${index}">
+                <i class="fas fa-search-plus zoom-icon"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h6>${cert.title}</h6>
+              <div class="tech-tag mb-2">${cert.category}</div>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">${cert.date}</small>
+                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#certModal${index}">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+        certificatesContainer.appendChild(certElement);
+        
+        // Création des modales pour chaque certificat
+        const modalElement = document.createElement('div');
+        modalElement.innerHTML = `
+          <div class="modal fade" id="certModal${index}" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">${cert.title}</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="${cert.imgSrc}" alt="${cert.title}" class="modal-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modalElement.firstElementChild);
+      });
+    }
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.stat-card, .skill-card, .project-card, .service-card, .certificate-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
