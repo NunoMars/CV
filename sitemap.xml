@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nunomars.github.io/CV/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nunomars.github.io/CV/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nunomars.github.io/CV/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://nunomars.github.io/CV/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nunomars.github.io/CV/"/>
+  </url>
+  <url>
+    <loc>https://nunomars.github.io/CV/en/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nunomars.github.io/CV/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nunomars.github.io/CV/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://nunomars.github.io/CV/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nunomars.github.io/CV/"/>
+  </url>
+  <url>
+    <loc>https://nunomars.github.io/CV/pt/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nunomars.github.io/CV/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nunomars.github.io/CV/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://nunomars.github.io/CV/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nunomars.github.io/CV/"/>
+  </url>
+  <url>
+    <loc>https://nunomars.github.io/CV/cv-fr.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nunomars.github.io/CV/cv-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nunomars.github.io/CV/cv-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://nunomars.github.io/CV/cv-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nunomars.github.io/CV/cv-fr.html"/>
+  </url>
+  <url>
+    <loc>https://nunomars.github.io/CV/cv-en.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nunomars.github.io/CV/cv-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nunomars.github.io/CV/cv-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://nunomars.github.io/CV/cv-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nunomars.github.io/CV/cv-fr.html"/>
+  </url>
+  <url>
+    <loc>https://nunomars.github.io/CV/cv-pt.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nunomars.github.io/CV/cv-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nunomars.github.io/CV/cv-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://nunomars.github.io/CV/cv-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nunomars.github.io/CV/cv-fr.html"/>
+  </url>
+</urlset>
